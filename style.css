@@ -1,6 +1,9 @@
 body{
-  background: #6c757d;  
+    background-blend-mode:multiply;
+    animation: multiplyColors 4s infinite alternate linear both;
 }
+
+
 
 .container{
     display: flex;
@@ -11,12 +14,19 @@ body{
 }
 
 .background{
-    border:1px solid #d8d0d0;
-    background-color: #0f0f0f;
     height: 500px;
     width: 450px;
     border-radius: 10px;
-    
+    background-color: white;
+     
+}
+
+.Tela-de-Login{
+    color: #d8d0d0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+
 }
 
 .erro{
@@ -27,12 +37,14 @@ body{
     width: 400px;
     height: 50px;
     margin: 5px auto;
-    background-color: #fff3cd;
-    color: #664d03;
+    color: white;
     border-radius:5px;
+    border: 1px solid white;
+    background-blend-mode:multiply;
+    animation: multiplyColors 4s infinite alternate linear both;
 }
 
-.login, .btn-login, .register{
+.login, .btn-login-container, .register{
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -40,17 +52,23 @@ body{
 }
 
 .register{
+
     display: none;
+    animation: register 3s 0.5 ease-in
+}
+
+@keyframes register {
+    0%{}
 }
 
 input, button{
     margin-right: 5px;
     width: 400px;
     height: 40px;
-    border-radius: 50px;
+    border-radius:15px;
 }
 
-.up{
+.btn-login{
     float: left;
     width: 400px; 
     height: 40px; 
@@ -75,4 +93,12 @@ input, button{
 
 .btn2{
     margin-top: 190px;
+}
+
+@keyframes multiplyColors {
+    0%{background: #0595bb;background-image: url("./img/topography.webp");}
+    20%{background:#6d47d9; background-image: url("./img/topography.webp");}
+    50%{background-color: #0e898dd3; background-image: url("./img/topography.webp");}
+    70%{background-color: #2a71b0; background-image: url("./img/topography.webp");}
+    100%{background-color: #444f98; background-image: url("./img/topography.webp");}
 }
