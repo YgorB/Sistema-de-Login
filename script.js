@@ -29,24 +29,21 @@ function login(){
         if(loginEmail.value == user.email && loginPassword.value == user.password){
             isUser = true;
             loged = true;
-            alertError.style.display
+
         }
     })
 
 
     if(loged && isUser){
-        alertError.textcontent = 'logado com sucesso';
-        alertError.style.display = 'flex'
+        alertError.innerHTML = 'logado com sucesso';
         loginEmail = '';
         loginPassword = '';
     }else if( loged && !isUser){
-        alertError.textContent = 'senha incorreta';
-        alertError.style.display = 'flex'
+        alertError.innerHTML = 'senha incorreta';
         loginEmail = '';
         loginPassword = '';
     } else{
-        alertError.textContent = 'usuario não encontrado';
-        alertError.style.display = 'flex'
+        alertError.innerHTML = 'usuario não encontrado';
     }
 }
 
@@ -130,10 +127,6 @@ function weakPassword(password){
     }else{
         return false
     }
-}
-
-function btnmMultiplyColor(color){
-
 }
 
 clear.addEventListener('click', DeleteLocalStorage)
